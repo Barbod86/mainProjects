@@ -1,0 +1,14 @@
+{% extends 'plan/main.html' %}
+{% block content %}
+<h1>register page</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="register">
+</form>
+
+<p>already have an account? <a href="{% url 'login' %}">login</a></p>
+
+{% endblock content %}
+

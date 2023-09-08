@@ -1,0 +1,10 @@
+{% extends 'plan/main.html' %}
+{% block content %}
+<a href="{% url 'plan_list' %}">go back</a>
+
+<form method="post">
+    {% csrf_token %}
+    <p>are you sure you want to delete this? {{ workoutplans.title }}</p>
+    <input type="submit" value="delete">
+</form>
+{% endblock content %}

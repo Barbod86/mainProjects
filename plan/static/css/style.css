@@ -1,0 +1,39 @@
+body{ background-color: rgb(255, 243, 243);}
+input{ border-color: red;
+    border-radius: 7px;
+    border-width: 4px;
+    padding: 6px;
+    margin: 8px;
+}
+h1{ font-size: 75px;
+font-family: serif;
+}
+p{ font-size: 20px;
+font-family: sans-serif;
+}
+td{ font-size: 20px;
+    font-family: sans-serif;
+    background-color: rgb(255, 199, 199); ;
+    border-radius: 6px;  
+}
+th{ font-size: 20px;
+    font-family: Impact, Bold, sans-serif;
+    margin-bottom: 8px;
+}
+a{ font-size: 20px;
+    font-family: Impact,sans-serif;
+    color: rgb(241, 0, 0);
+}
+a:link{ color: rgb(241, 0, 0);
+    text-decoration: none;}
+a:hover{ color: rgb(255, 140, 32);
+    text-decoration: underline
+}
+.workout:link{ background-color: rgb(255, 123, 0);
+    color: yellow;
+}
+.workout:hover{ background-color: rgb(255, 123, 0);
+    color: red;}
+
+tr{ list-style-type: square;
+}

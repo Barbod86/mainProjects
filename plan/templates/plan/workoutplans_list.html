@@ -1,0 +1,30 @@
+{% extends 'plan/main.html' %}
+{% block content %}
+
+{% if request.user.is_authenticated %}
+{{ request.user }}
+<a href="{% url 'logout' %}">logout</a>
+{% else %}
+<a href="{% url 'login' %}">login</a>
+{% endif %}
+
+<hr>
+<h1>Workout plans</h1>
+<a href="{% url 'plan_create' %}">add workout plan</a>
+
+<table>
+    <tr>
+        <th>item</th>
+    </tr>
+    {% for plan in plan_list %}
+    <tr>
+        <td>{{ plan.title }}</td><br>
+        <td><a href="{% url 'plan_edit' plan.id %}">edit</a></td>
+        <td><a href="{% url 'plan_delete' plan.id %}">delete</a></td>
+    </tr>
+    {% empty %}
+    <p>no item in this list</p>
+    {% endfor %}
+</table>
+
+{% endblock content %}
